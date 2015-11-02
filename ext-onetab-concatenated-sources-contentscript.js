@@ -1,1 +1,36 @@
-document.addEventListener("m\x6f\x75\u0073\145\x64\157\x77\156",function(QO){if(QO.button==2){var NO=QO.target;while(NO){if(NO instanceof HTMLAnchorElement){var _O=NO;var UO=NO['\u0068\x72\u0065\146'];var aO=NO.innerText;if(!aO)aO='';if(aO.length>0){if(aO.charAt(0)=='\u0020')aO=aO.substr(1)}if(aO=='')aO=UO;var vO=aO;window['\143\150\162o\u006d\145']['\162\u0075\u006e\164\151\u006d\145']['\x73e\156d\u004d\x65\163\x73a\u0067\u0065'](undefined,{type:"l\151n\u006bR\151\u0067h\u0074\x43\x6c\u0069\143k",url:UO,title:vO},function(ma){});break}else {NO=NO.parentNode}}}},true)
+document.addEventListener("mousedown", function(event) {
+  if (event.button == 2) {
+    /** @type {(EventTarget|null)} */
+    var link = event.target;
+    for (;link;) {
+      if (link instanceof HTMLAnchorElement) {
+        /** @type {HTMLAnchorElement} */
+        var linkemail = link;
+        var href = link["href"];
+        var text = link.innerText;
+        if (!text) {
+          /** @type {string} */
+          text = "";
+        }
+        if (text.length > 0) {
+          if (text.charAt(0) == " ") {
+            text = text.substr(1);
+          }
+        }
+        if (text == "") {
+          text = href;
+        }
+        var MSG_CLOSURE_CUSTOM_COLOR_BUTTON = text;
+        window["chrome"]["runtime"]["sendMessage"](undefined, {
+          type : "linkRightClick",
+          url : href,
+          title : MSG_CLOSURE_CUSTOM_COLOR_BUTTON
+        }, function(dataAndEvents) {
+        });
+        break;
+      } else {
+        link = link.parentNode;
+      }
+    }
+  }
+}, true);
