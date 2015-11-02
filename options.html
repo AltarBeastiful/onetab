@@ -1,0 +1,49 @@
+<html>
+<head>
+  <title>OneTab options</title>
+
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:400,600,300,700' rel='stylesheet' type='text/css'>
+
+  <style>
+
+    input[type='radio'] {
+      margin:0;
+      padding:0;
+      outline:none;
+      font-family:inherit; box-sizing:border-box
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+        position: absolute; left: -999em;
+    }
+
+    input[type="radio"] + label:before,
+    input[type="checkbox"] + label:before {
+      content:'';
+      display: inline-block;
+      position:relative;
+      top:7px;
+      left:-5px;
+      width:25px;
+      height:25px;
+      background-image:url(images/checkboxradiosprite.png);
+    }
+
+    input[type="checkbox"] + label:before { background-position: 0 -25px;} input[type="checkbox"]:checked + label:before {background-position: 0 0 ; }
+    input[type="radio"] + label:before { background-position: -25px -25px;} input[type="radio"]:checked + label:before { background-position: -25px 0;}
+
+  </style>
+
+</head>
+
+<body style="margin:0; padding:0; font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif; font-weight: 400; font-size:14px">
+
+  <div style="padding:50px 50px 10px 50px" id="contentAreaDiv"></div>
+
+
+  <script src="ext-onetab-concatenated-sources-options.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+{
+   "background": {
+      "scripts": [ "ext-onetab-concatenated-sources-background.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "19": "images/icon19.png",
+         "38": "images/icon38.png"
+      }
+   },
+   "commands": {
+      "display-onetab": {
+         "description": "Display OneTab",
+         "suggested_key": {
+            "default": "Alt+Shift+1"
+         }
+      },
+      "send-current-tab-to-onetab": {
+         "description": "Send the current tab to OneTab",
+         "suggested_key": {
+            "default": "Alt+Shift+2"
+         }
+      }
+   },
+   "content_scripts": [ {
+      "js": [ "ext-onetab-concatenated-sources-contentscript.js" ],
+      "matches": [ "http://*/*", "https://*/*" ]
+   } ],
+   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+   "description": "Save up to 95% memory and reduce tab clutter",
+   "icons": {
+      "128": "images/extension-icon128.png",
+      "16": "images/extension-icon16.png",
+      "48": "images/extension-icon48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDs2r/nSa4MRBoDT1pBx+Q9gI0JaTBaIrsD4uKT9oA4HUF2xboeOA1BDw3lmoJ4G8BL0tAbJTcEnxlkTsCY7C413MojaeDZy4pza3RJqkMAKiJisl8t8eiP+c0ox3l1syb1xmI7EEIouXIxlCX8LGoguB0AuWtunGLCjiLoM2vJLQIDAQAB",
+   "manifest_version": 2,
+   "name": "OneTab",
+   "options_page": "options.html",
+   "permissions": [ "tabs", "\u003Call_urls>", "webRequest", "webRequestBlocking", "contextMenus" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.7"
+}
