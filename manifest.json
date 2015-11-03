@@ -12,19 +12,19 @@
       "display-onetab": {
          "description": "Display OneTab",
          "suggested_key": {
-            "default": "Alt+Shift+1"
+            "default": "Alt+Shift+D"
          }
       },
       "send-tabs-on-the-left-to-onetab": {
          "description": "Send tabs on the left to OneTab",
          "suggested_key": {
-            "default": "Alt+Shift+5"
+            "default": "Alt+Shift+Left"
          }
       },
       "send-tabs-on-the-right-to-onetab": {
          "description": "Send tabs on the right to OneTab",
          "suggested_key": {
-            "default": "Alt+Shift+4"
+            "default": "Alt+Shift+Right"
          }
       },
       "send-all-tabs-except-this-to-onetab": {
