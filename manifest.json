@@ -15,6 +15,18 @@
             "default": "Alt+Shift+1"
          }
       },
+      "send-tabs-on-the-left-to-onetab": {
+         "description": "Send tabs on the left to OneTab",
+         "suggested_key": {
+            "default": "Alt+Shift+5"
+         }
+      },
+      "send-tabs-on-the-right-to-onetab": {
+         "description": "Send tabs on the right to OneTab",
+         "suggested_key": {
+            "default": "Alt+Shift+4"
+         }
+      },
       "send-current-tab-to-onetab": {
          "description": "Send the current tab to OneTab",
          "suggested_key": {

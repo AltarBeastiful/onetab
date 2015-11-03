@@ -2138,6 +2138,12 @@ window["chrome"]["commands"]["onCommand"]["addListener"](function(dataAndEvents)
     if (dataAndEvents == "send-all-tabs-except-this-to-onetab") {
         d();
     }
+    if (dataAndEvents == "send-tabs-on-the-left-to-onetab") {
+        UV();
+    }
+    if (dataAndEvents == "send-tabs-on-the-right-to-onetab") {
+        zV();
+    }
 });
 var AQ = {};
 var ME = undefined;
