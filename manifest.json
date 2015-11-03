@@ -27,11 +27,14 @@
             "default": "Alt+Shift+4"
          }
       },
-      "send-current-tab-to-onetab": {
-         "description": "Send the current tab to OneTab",
+      "send-all-tabs-except-this-to-onetab": {
+         "description": "Send all tabs except this tab to OneTab",
          "suggested_key": {
-            "default": "Alt+Shift+2"
+            "default": "Alt+Shift+Up"
          }
+      },
+      "send-current-tab-to-onetab": {
+         "description": "Send the current tab to OneTab"
       }
    },
    "content_scripts": [ {
