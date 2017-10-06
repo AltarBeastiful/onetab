@@ -3766,6 +3766,33 @@ function SV() {
         }));
         return t;
     }());
+    // delete all
+    obj.appendChild(function(){
+        var div = document.createElement("div");
+        div.className = "clickable";
+        div.style.fontSize = "12.25px";
+        var span = document.createElement("span");
+        span.style.verticalAlign = "middle";
+        span.innerText = "Delete All";
+        span.onclick = function(){
+            if(confirm("Are you sure you want to delete all？")){
+                var contentAreaDiv = document.getElementById("contentAreaDiv");
+                    divChildren = contentAreaDiv.children;
+                for(var i=3,len=divChildren.length-1;i<len;i++){
+                    var elem = divChildren[3];
+                    elem.parentNode.removeChild(elem);
+                }
+                divChildren[2].innerText = "Total：0 tab";
+                localStorage.setItem("state",JSON.stringify({
+                    "tabGroups":[]
+                }));
+                localStorage.setItem("topSites",null);
+
+            }
+        }
+        div.appendChild(span);
+        return div;
+    }());
     obj.appendChild(function() {
         /** @type {Element} */
         var t = document.createElement("div");
